@@ -1,4 +1,7 @@
 C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\bin\Debug\AndroidTest.dll
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\bin\Debug\BEPUik.dll
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\bin\Debug\BepuPhysics.dll
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\bin\Debug\BEPUutilities.dll
 C:\Program Files (x86)\MonoGame\v3.0\Assemblies\Android\MonoGame.Framework.dll
 C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\SkinnedModelData\bin\Debug\SkinnedModelData.dll
 C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\bin\Debug\Lidgren.Network.dll

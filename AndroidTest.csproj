@@ -41,6 +41,18 @@
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BEPUik, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\BEPUik.dll</HintPath>
+    </Reference>
+    <Reference Include="BepuPhysics, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\BepuPhysics.dll</HintPath>
+    </Reference>
+    <Reference Include="BEPUutilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\BEPUutilities.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
     <Reference Include="OpenTK" />
@@ -157,8 +169,6 @@
     <AndroidAsset Include="Content\metal_1.xnb" />
     <AndroidAsset Include="Content\Models\Cube.xnb" />
     <AndroidAsset Include="Content\Models\Ground.xnb" />
-    <AndroidAsset Include="Content\Models\Vampire.xnb" />
-    <AndroidAsset Include="Content\Models\Vampire_Diffuse_0.xnb" />
     <AndroidAsset Include="Content\rust_0.xnb" />
     <AndroidAsset Include="Content\rust_1.xnb" />
     <AndroidAsset Include="Content\Textures\AnimatedButterfly.xnb" />
@@ -227,6 +237,8 @@
     <AndroidAsset Include="Content\Textures_Menu\gradient.xnb" />
     <AndroidAsset Include="Content\Textures_Menu\ThumbBase.xnb" />
     <AndroidAsset Include="Content\Textures_Menu\ThumbStick.xnb" />
+    <AndroidAsset Include="Content\Models\Vampire.xnb" />
+    <AndroidAsset Include="Content\Models\Vampire_Diffuse_0.xnb" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
@@ -246,12 +258,13 @@
     <AndroidResource Include="Resources\Values\Styles.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\TestData.xml">
-      <Link>TestData.xml</Link>
-    </Content>
     <Content Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\TestLevel.xml">
       <Link>TestLevel.xml</Link>
+      <SubType>Designer</SubType>
     </Content>
+    <AndroidAsset Include="Content\TestData.xml">
+      <SubType>Designer</SubType>
+    </AndroidAsset>
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>

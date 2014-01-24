@@ -67,6 +67,9 @@ public class MonoPackageManager {
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		"AndroidTest.dll",
+		"BEPUik.dll",
+		"BepuPhysics.dll",
+		"BEPUutilities.dll",
 		"MonoGame.Framework.dll",
 		"SkinnedModelData.dll",
 		"Lidgren.Network.dll",
