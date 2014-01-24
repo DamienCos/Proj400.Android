@@ -159,7 +159,6 @@
     <Compile Include="Game1.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FrameWork\TestLevel_1.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Content\spriteFont1.xnb" />
@@ -258,13 +257,10 @@
     <AndroidResource Include="Resources\Values\Styles.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\TestLevel.xml">
-      <Link>TestLevel.xml</Link>
-      <SubType>Designer</SubType>
-    </Content>
     <AndroidAsset Include="Content\TestData.xml">
       <SubType>Designer</SubType>
     </AndroidAsset>
+    <Content Include="Notes.txt" />
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
