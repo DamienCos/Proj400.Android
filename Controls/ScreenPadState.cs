@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
 
-namespace AndroidTest
+namespace Blocker
 {
     public struct ScreenPadState
     {
@@ -40,12 +40,12 @@ namespace AndroidTest
     public struct ThumbSticks
     {
         public Vector2 Left;
-        public Vector2 Right;
+        //public Vector2 Right;
 
-        public ThumbSticks(Vector2 left, Vector2 right)
+        public ThumbSticks(Vector2 left)
         {
             Left = left;
-            Right = right;
+        
         }
     }
 

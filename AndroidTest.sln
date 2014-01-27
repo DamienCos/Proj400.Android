@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidTest", "AndroidTest.csproj", "{B4210966-554E-4B96-ABF9-A76A87AEAF9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4210966-554E-4B96-ABF9-A76A87AEAF9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4210966-554E-4B96-ABF9-A76A87AEAF9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4210966-554E-4B96-ABF9-A76A87AEAF9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4210966-554E-4B96-ABF9-A76A87AEAF9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = AndroidTest.csproj
+	EndGlobalSection
+EndGlobal

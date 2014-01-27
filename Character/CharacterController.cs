@@ -23,7 +23,7 @@ using BEPUphysics.Entities;
 using BEPUphysics.Threading;
 using System.Threading;
 
-namespace AndroidTest
+namespace Blocker
 {
     /// <summary>
     /// Gives a physical object FPS-like control, including stepping and jumping.

@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B4210966-554E-4B96-ABF9-A76A87AEAF9A}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Blocker</RootNamespace>
+    <AssemblyName>AndroidTest</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions />
+    <MandroidI18n />
+    <TargetFrameworkVersion>v4.3</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <JavaMaximumHeapSize />
+    <JavaOptions />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;ANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;ANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BEPUphysics, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\BEPUphysics.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="OpenTK" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Android\MonoGame.Framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\Framework\BaseCamera.cs">
+      <Link>FrameWork\BaseCamera.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\Framework\Character.cs">
+      <Link>FrameWork\Character.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\Framework\ChaseCamera.cs">
+      <Link>FrameWork\ChaseCamera.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\Framework\GameAnimatedModel.cs">
+      <Link>FrameWork\GameAnimatedModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\Framework\GameModel.cs">
+      <Link>FrameWork\GameModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\Framework\GameObject2D.cs">
+      <Link>FrameWork\GameObject2D.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\Framework\GameObject3D.cs">
+      <Link>FrameWork\GameObject3D.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\Framework\GameScene.cs">
+      <Link>MenuSystem\GameScene.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\Framework\GameSprite.cs">
+      <Link>FrameWork\GameSprite.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\Framework\RenderContext.cs">
+      <Link>FrameWork\RenderContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\LevelData.cs">
+      <Link>MenuSystem\LevelData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\MenuSystem\GameplayScreen.cs">
+      <Link>MenuSystem\GameplayScreen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\MenuSystem\GameScreen.cs">
+      <Link>MenuSystem\GameScreen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\MenuSystem\SceneManager.cs">
+      <Link>MenuSystem\SceneManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\MenuSystem\ScreenManager.cs">
+      <Link>MenuSystem\ScreenManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\MenuSystem\Screens\BackgroundScreen.cs">
+      <Link>MenuSystem\Screens\BackgroundScreen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\MenuSystem\Screens\LoadingScreen.cs">
+      <Link>MenuSystem\Screens\LoadingScreen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\MenuSystem\Screens\MainMenuScreen.cs">
+      <Link>MenuSystem\Screens\MainMenuScreen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\MenuSystem\Screens\MenuEntry.cs">
+      <Link>MenuSystem\Screens\MenuEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\MenuSystem\Screens\MenuScreen.cs">
+      <Link>MenuSystem\Screens\MenuScreen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\MenuSystem\Screens\MessageBoxScreen.cs">
+      <Link>MenuSystem\Screens\MessageBoxScreen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\MenuSystem\Screens\OptionsScreens\ControlsScreen.cs">
+      <Link>MenuSystem\Screens\OptionScreens\ControlsScreen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\MenuSystem\Screens\OptionsScreens\HelpScreen.cs">
+      <Link>MenuSystem\Screens\OptionScreens\HelpScreen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\MenuSystem\Screens\OptionsScreens\LeaderBoardScreen.cs">
+      <Link>MenuSystem\Screens\OptionScreens\LeaderBoardScreen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\MenuSystem\Screens\OptionsScreens\OptionsMenuScreen.cs">
+      <Link>MenuSystem\Screens\OptionScreens\OptionsMenuScreen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\MenuSystem\Screens\OptionsScreens\VolumeScreen.cs">
+      <Link>MenuSystem\Screens\OptionScreens\VolumeScreen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\MenuSystem\Screens\PauseScreen.cs">
+      <Link>MenuSystem\Screens\PauseScreen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\MenuSystem\Screens\PlayerIndexEventArgs.cs">
+      <Link>MenuSystem\Screens\PlayerIndexEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\MenuSystem\TestLevel.cs">
+      <Link>MenuSystem\TestLevel.cs</Link>
+    </Compile>
+    <Compile Include="Activity1.cs" />
+    <Compile Include="Character\CharacterController.cs" />
+    <Compile Include="Character\CharacterControllerInput.cs" />
+    <Compile Include="Character\HorizontalMotionConstraint.cs" />
+    <Compile Include="Character\ICharacterTag.cs" />
+    <Compile Include="Character\QueryManager.cs" />
+    <Compile Include="Character\StanceManager.cs" />
+    <Compile Include="Character\StepManager.cs" />
+    <Compile Include="Character\SupportFinder.cs" />
+    <Compile Include="Character\VerticalMotionConstraint.cs" />
+    <Compile Include="ChaseCam.cs" />
+    <Compile Include="Controls\InputAction.cs" />
+    <Compile Include="Controls\InputState.cs" />
+    <Compile Include="Controls\ScreenPad.cs" />
+    <Compile Include="Controls\ScreenPadState.cs" />
+    <Compile Include="FrameWork\FrameRateCounter.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\spriteFont1.xnb" />
+    <AndroidAsset Include="Content\gamefont.xnb" />
+    <AndroidAsset Include="Content\menufont.xnb" />
+    <AndroidAsset Include="Content\metal_0.xnb" />
+    <AndroidAsset Include="Content\metal_1.xnb" />
+    <AndroidAsset Include="Content\Models\Cube.xnb" />
+    <AndroidAsset Include="Content\Models\Ground.xnb" />
+    <AndroidAsset Include="Content\rust_0.xnb" />
+    <AndroidAsset Include="Content\rust_1.xnb" />
+    <AndroidAsset Include="Content\Textures\BackGround.xnb" />
+    <AndroidAsset Include="Content\Textures\Ball.xnb" />
+    <AndroidAsset Include="Content\Textures\Bubble.xnb" />
+    <AndroidAsset Include="Content\Textures\Cloud.xnb" />
+    <AndroidAsset Include="Content\Textures\X.xnb" />
+    <AndroidAsset Include="Content\Textures_Menu\ABXY_buttons.xnb" />
+    <AndroidAsset Include="Content\Textures_Menu\background.xnb" />
+    <AndroidAsset Include="Content\Textures_Menu\blank.xnb" />
+    <AndroidAsset Include="Content\Textures_Menu\Dpad_All.xnb" />
+    <AndroidAsset Include="Content\Textures_Menu\gradient.xnb" />
+    <AndroidAsset Include="Content\Textures_Menu\ThumbBase.xnb" />
+    <AndroidAsset Include="Content\Textures_Menu\ThumbStick.xnb" />
+    <AndroidAsset Include="Content\Models\Vampire.xnb" />
+    <AndroidAsset Include="Content\Models\Vampire_Diffuse_0.xnb" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Layout\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\Splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\TestData.xml">
+      <SubType>Designer</SubType>
+    </AndroidAsset>
+    <Content Include="Notes.txt" />
+    <Content Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SkinnedModelData\SkinnedModelData.csproj">
+      <Project>{36C6B069-E3D4-486D-8110-73823903AF7A}</Project>
+      <Name>SkinnedModelData</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

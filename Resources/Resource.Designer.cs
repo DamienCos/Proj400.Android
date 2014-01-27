@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("AndroidTest.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("Blocker.Resource", IsApplication=true)]
 
-namespace AndroidTest
+namespace Blocker
 {
 	
 	
@@ -26,8 +26,10 @@ namespace AndroidTest
 		
 		public static void UpdateIdValues()
 		{
-			global::SkinnedModelData.Resource.String.ApplicationName = global::AndroidTest.Resource.String.ApplicationName;
-			global::SkinnedModelData.Resource.String.Hello = global::AndroidTest.Resource.String.Hello;
+			global::BEPUphysics.Resource.String.ApplicationName = global::Blocker.Resource.String.ApplicationName;
+			global::BEPUphysics.Resource.String.Hello = global::Blocker.Resource.String.Hello;
+			global::SkinnedModelData.Resource.String.ApplicationName = global::Blocker.Resource.String.ApplicationName;
+			global::SkinnedModelData.Resource.String.Hello = global::Blocker.Resource.String.Hello;
 		}
 		
 		public partial class Attribute

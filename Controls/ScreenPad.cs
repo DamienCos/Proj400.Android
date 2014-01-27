@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
 
-namespace AndroidTest
+namespace Blocker
 {
     public class ScreenPad
     {
@@ -17,13 +17,13 @@ namespace AndroidTest
 
         #region Positions
         Vector2 LeftThumbPosition;
-        Vector2 RightThumbPosition;
+        //Vector2 RightThumbPosition;
 
         Vector2 maxLeft;
         Vector2 minLeft;
 
-        Vector2 maxRight;
-        Vector2 minRight;
+        //Vector2 maxRight;
+        //Vector2 minRight;
 
         Vector3 touch3DPoint = Vector3.Zero;
         ContainmentType t = ContainmentType.Disjoint;
@@ -48,27 +48,27 @@ namespace AndroidTest
         /// <summary>
         /// The Value From the Right Stick. Vector2
         /// </summary>
-        public Vector2 RightStick
-        {
-            get
-            {
-                Vector2 scaledVector = (RightThumbPosition - RightThumbOriginalPosition) / (padTexture.Width / 2);
-                scaledVector.Y *= -1;
-                if (scaledVector.Length() > 1f)
-                    scaledVector.Normalize();
-                return scaledVector;
-            }
-        }
+        //public Vector2 RightStick
+        //{
+        //    get
+        //    {
+        //        Vector2 scaledVector = (RightThumbPosition - RightThumbOriginalPosition) / (padTexture.Width / 2);
+        //        scaledVector.Y *= -1;
+        //        if (scaledVector.Length() > 1f)
+        //            scaledVector.Normalize();
+        //        return scaledVector;
+        //    }
+        //}
 
         private Vector2 LeftThumbOriginalPosition;
-        private Vector2 RightThumbOriginalPosition;
+      //  private Vector2 RightThumbOriginalPosition;
 
         private Vector2 LeftPadArea;
         private Vector2 LeftPadCenter;
-        private Vector2 RightPadArea;
-        private Vector2 RightPadCenter;
+        //private Vector2 RightPadArea;
+        //private Vector2 RightPadCenter;
 
-        private Vector2 fireButtonPosition;
+        //private Vector2 fireButtonPosition;
 
         private Vector2 ButtonX;
         private Vector2 ButtonY;
@@ -81,17 +81,17 @@ namespace AndroidTest
 
         private Texture2D padTexture;
         private Texture2D thumbTexture;
-        private Texture2D fireButton;
+       // private Texture2D fireButton;
 
         private Texture2D abxyTexture;
 
         private Color LeftThumbColor;
-        private Color RightThumbColor;
-        private Color FireButtonColor;
+       // private Color RightThumbColor;
+       // private Color FireButtonColor;
 
         int leftId = -1;
-        int rightId = -1;
-        int fireId = -1;
+       // int rightId = -1;
+       // int fireId = -1;
 
         int xId = -1;
         int yId = -1;
@@ -103,7 +103,7 @@ namespace AndroidTest
         Color aColor;
         Color bColor;
 
-        private BoundingSphere fireButtonCollision;
+       // private BoundingSphere fireButtonCollision;
 
         private BoundingSphere leftStickCollision;
         private BoundingSphere rightStickCollision;
@@ -114,8 +114,8 @@ namespace AndroidTest
         private BoundingSphere bButtonCollision;
 
         TouchLocation? leftTouch = null;
-        TouchLocation? rightTouch = null;
-        TouchLocation? fireTouch = null;
+        //TouchLocation? rightTouch = null;
+        //TouchLocation? fireTouch = null;
 
         TouchLocation? xTouch = null;
         TouchLocation? yTouch = null;
@@ -129,22 +129,22 @@ namespace AndroidTest
         /// <summary>
         /// Weapon Type for Proper HUD Selection
         /// </summary>
-        public WeaponType CurrentWeapon
-        {
-            get { return currentWeapon; }
-            set { currentWeapon = value; }
-        }
+        //public WeaponType CurrentWeapon
+        //{
+        //    get { return currentWeapon; }
+        //    set { currentWeapon = value; }
+        //}
 
-        private WeaponType currentWeapon = WeaponType.Range;
+        //private WeaponType currentWeapon = WeaponType.Range;
 
-        public enum WeaponType
-        {
-            Meelee,
-            Range,
-            RangeAutoAim,
-        }
+        //public enum WeaponType
+        //{
+        //    Meelee,
+        //    Range,
+        //    RangeAutoAim,
+        //}
 
-        public bool FireButtonPressed { get; set; }
+        //public bool FireButtonPressed { get; set; }
 
         VirtualButtonState xPressed, yPressed, aPressed, bPressed = VirtualButtonState.Released; //, mPressed
         Game1 game;
@@ -153,25 +153,25 @@ namespace AndroidTest
 
         #endregion
 
-        public ScreenPad(Game1 game, Texture2D pad, Texture2D thumb, Texture2D fire,
-            Color leftColor, Color rightColor, Color buttonColor)
-        {
-            this.game = game;
+        //public ScreenPad(Game1 game, Texture2D pad, Texture2D thumb, Texture2D fire,
+        //    Color leftColor, Color rightColor, Color buttonColor)
+        //{
+        //    this.game = game;
 
-            padTexture = pad;
-            thumbTexture = thumb;
+        //    padTexture = pad;
+        //    thumbTexture = thumb;
 
-            maxDistance = (padTexture.Width - thumbTexture.Width);
+        //    maxDistance = (padTexture.Width - thumbTexture.Width);
 
-            fireButton = fire;
+        //    fireButton = fire;
 
-            // colors for sides 
-            LeftThumbColor = leftColor;
-            RightThumbColor = rightColor;
-            FireButtonColor = buttonColor;
-            // auto placement according to screen rotation
-            PlaceControls();
-        }
+        //    // colors for sides 
+        //    LeftThumbColor = leftColor;
+        //    RightThumbColor = rightColor;
+        //    FireButtonColor = buttonColor;
+        //    // auto placement according to screen rotation
+        //    PlaceControls();
+        //}
 
         /// <summary>
         /// Creates X360 type virtual Controler
@@ -227,51 +227,51 @@ namespace AndroidTest
 
 
             #region Right Stick
-            //xOffset = game.GraphicsDevice.Viewport.Width - (padTexture.Width - 30) * 2f;
-            ////yOffest = game.GraphicsDevice.Viewport.Height - (padTexture.Height - 30) * 2f;
+            ////xOffset = game.GraphicsDevice.Viewport.Width - (padTexture.Width - 30) * 2f;
+            //////yOffest = game.GraphicsDevice.Viewport.Height - (padTexture.Height - 30) * 2f;
 
-            //xOffset = game.GraphicsDevice.Viewport.Width - 490;
-            //yOffest = game.GraphicsDevice.Viewport.Height - 490;
+            ////xOffset = game.GraphicsDevice.Viewport.Width - 490;
+            ////yOffest = game.GraphicsDevice.Viewport.Height - 490;
 
-            //// we already have the yOffset properly setup so use it from a few lines above
+            ////// we already have the yOffset properly setup so use it from a few lines above
 
-            //RightPadArea = new Vector2(xOffset, yOffest);
+            ////RightPadArea = new Vector2(xOffset, yOffest);
 
-            //RightPadCenter = new Vector2(
-            //    RightPadArea.X + 32,
-            //    RightPadArea.Y + 32);
+            ////RightPadCenter = new Vector2(
+            ////    RightPadArea.X + 32,
+            ////    RightPadArea.Y + 32);
 
-            //rightStickCollision = new BoundingSphere(new Vector3(RightPadCenter, 0), padTexture.Width / 2);
+            ////rightStickCollision = new BoundingSphere(new Vector3(RightPadCenter, 0), padTexture.Width / 2);
 
-            //RightThumbOriginalPosition = new Vector2(
-            //    RightPadArea.X + (padTexture.Width - thumbTexture.Width) / 2,
-            //    RightPadArea.Y + (padTexture.Height - thumbTexture.Height) / 2);
+            ////RightThumbOriginalPosition = new Vector2(
+            ////    RightPadArea.X + (padTexture.Width - thumbTexture.Width) / 2,
+            ////    RightPadArea.Y + (padTexture.Height - thumbTexture.Height) / 2);
 
-            //RightThumbPosition = RightThumbOriginalPosition;
+            ////RightThumbPosition = RightThumbOriginalPosition;
 
-            //minRight = new Vector2(
-            //    RightPadCenter.X - padTexture.Width / 2 - thumbTexture.Width / 2,
-            //    RightPadCenter.Y - padTexture.Height / 2 - thumbTexture.Height / 2);
+            ////minRight = new Vector2(
+            ////    RightPadCenter.X - padTexture.Width / 2 - thumbTexture.Width / 2,
+            ////    RightPadCenter.Y - padTexture.Height / 2 - thumbTexture.Height / 2);
 
-            //maxRight = new Vector2(
-            //    RightPadCenter.X + padTexture.Width / 2 - thumbTexture.Width / 2,
-            //    RightPadCenter.Y + padTexture.Height / 2 - thumbTexture.Height / 2);
+            ////maxRight = new Vector2(
+            ////    RightPadCenter.X + padTexture.Width / 2 - thumbTexture.Width / 2,
+            ////    RightPadCenter.Y + padTexture.Height / 2 - thumbTexture.Height / 2);
             #endregion
 
 
             #region Buttons
            
-            ButtonX = new Vector2(848f, 600f);
-            xButtonCollision = new BoundingSphere(new Vector3(new Vector2(ButtonX.X + 42f, ButtonX.Y + 42f), 0), 42);
+            ButtonX = new Vector2(1000f, 600f);
+            xButtonCollision = new BoundingSphere(new Vector3(new Vector2(ButtonX.X + 42f, ButtonX.Y + 42f), 0), 50f);
 
-            ButtonY = new Vector2(960f, 580f);
-            yButtonCollision = new BoundingSphere(new Vector3(new Vector2(ButtonY.X + 42f, ButtonY.Y + 42f), 0), 42f);
+            ButtonY = new Vector2(1150f, 600f);
+            yButtonCollision = new BoundingSphere(new Vector3(new Vector2(ButtonY.X + 42f, ButtonY.Y + 42f), 0), 50f);
 
-            ButtonA = new Vector2(1000f, 469f);
-            aButtonCollision = new BoundingSphere(new Vector3(new Vector2(ButtonA.X + 42f, ButtonA.Y + 42), 0), 42);
+            ButtonA = new Vector2(1150f, 450f);
+            aButtonCollision = new BoundingSphere(new Vector3(new Vector2(ButtonA.X + 42f, ButtonA.Y + 42), 0), 50f);
 
-            ButtonB = new Vector2(/*RightPadCenter.X + 64f*/ 1000f, /*RightPadCenter.Y +*/ 32f);
-            bButtonCollision = new BoundingSphere(new Vector3(new Vector2(ButtonB.X + 30f, ButtonB.Y + 30f), 0), 30f);
+            ButtonB = new Vector2(/*RightPadCenter.X + 64f*/ 1150f, /*RightPadCenter.Y +*/ 32f);
+            bButtonCollision = new BoundingSphere(new Vector3(new Vector2(ButtonB.X + 30f, ButtonB.Y + 30f), 0), 50f);
             #endregion
         }
 
@@ -306,39 +306,41 @@ namespace AndroidTest
             // right thumb (when we have range weapons in arms)
             xOffset = game.GraphicsDevice.Viewport.Width - padTexture.Width - 30;
 
+            #region MyRegion
             // we already have the yOffset properly setup so use it from a few lines above
 
-            RightPadArea = new Vector2(xOffset, yOffest);
+            //RightPadArea = new Vector2(xOffset, yOffest);
 
-            RightPadCenter = new Vector2(
-                RightPadArea.X + padTexture.Width / 2,
-                RightPadArea.Y + padTexture.Height / 2);
+            //RightPadCenter = new Vector2(
+            //    RightPadArea.X + padTexture.Width / 2,
+            //    RightPadArea.Y + padTexture.Height / 2);
 
-            rightStickCollision = new BoundingSphere(new Vector3(RightPadCenter, 0), padTexture.Width / 2);
+            //rightStickCollision = new BoundingSphere(new Vector3(RightPadCenter, 0), padTexture.Width / 2);
 
-            RightThumbOriginalPosition = new Vector2(
-                RightPadArea.X + (padTexture.Width - thumbTexture.Width) / 2,
-                RightPadArea.Y + (padTexture.Height - thumbTexture.Height) / 2);
+            //RightThumbOriginalPosition = new Vector2(
+            //    RightPadArea.X + (padTexture.Width - thumbTexture.Width) / 2,
+            //    RightPadArea.Y + (padTexture.Height - thumbTexture.Height) / 2);
 
-            RightThumbPosition = RightThumbOriginalPosition;
+            //RightThumbPosition = RightThumbOriginalPosition;
 
-            minRight = new Vector2(
-                RightPadCenter.X - padTexture.Width / 2 - thumbTexture.Width / 2,
-                RightPadCenter.Y - padTexture.Height / 2 - thumbTexture.Height / 2);
+            //minRight = new Vector2(
+            //    RightPadCenter.X - padTexture.Width / 2 - thumbTexture.Width / 2,
+            //    RightPadCenter.Y - padTexture.Height / 2 - thumbTexture.Height / 2);
 
-            maxRight = new Vector2(
-                RightPadCenter.X + padTexture.Width / 2 - thumbTexture.Width / 2,
-                RightPadCenter.Y + padTexture.Height / 2 - thumbTexture.Height / 2);
+            //maxRight = new Vector2(
+            //    RightPadCenter.X + padTexture.Width / 2 - thumbTexture.Width / 2,
+            //    RightPadCenter.Y + padTexture.Height / 2 - thumbTexture.Height / 2);
 
-            // and finally the fire button when we have meelee or auto aim arms
-            xOffset = game.GraphicsDevice.Viewport.Width - fireButton.Width - 30;
-            yOffest = game.GraphicsDevice.Viewport.Height - fireButton.Height - 30;
+            //// and finally the fire button when we have meelee or auto aim arms
+            //xOffset = game.GraphicsDevice.Viewport.Width - fireButton.Width - 30;
+            //yOffest = game.GraphicsDevice.Viewport.Height - fireButton.Height - 30;
 
-            fireButtonPosition = new Vector2(
-                RightPadCenter.X - fireButton.Width / 2,
-                RightPadCenter.Y - fireButton.Height / 2); //new Vector2(xOffset, yOffest);
+            //fireButtonPosition = new Vector2(
+            //    RightPadCenter.X - fireButton.Width / 2,
+            //    RightPadCenter.Y - fireButton.Height / 2); //new Vector2(xOffset, yOffest);
 
-            fireButtonCollision = new BoundingSphere(new Vector3(RightPadCenter, 0), fireButton.Width / 2);
+            //fireButtonCollision = new BoundingSphere(new Vector3(RightPadCenter, 0), fireButton.Width / 2); 
+            #endregion
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -357,8 +359,7 @@ namespace AndroidTest
                 //spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
                 spriteBatch.Draw(abxyTexture, ButtonA, new Rectangle(0, 0, 84, 84), (aPressed == VirtualButtonState.Pressed ? Color.Crimson : Color.White)); //aColor
 
-                // this is a special button to open menu
-                spriteBatch.Draw(abxyTexture, ButtonB, new Rectangle(84, 0, 84, 84), (bPressed == VirtualButtonState.Pressed ? Color.Crimson : Color.White), 0f, Vector2.Zero, 0.839f, SpriteEffects.None, 0f);
+                spriteBatch.Draw(abxyTexture, ButtonB, new Rectangle(84, 0, 84, 84), (bPressed == VirtualButtonState.Pressed ? Color.Crimson : Color.White), 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
 
                 spriteBatch.Draw(abxyTexture, ButtonX, new Rectangle(168, 0, 84, 84), (xPressed == VirtualButtonState.Pressed ? Color.Crimson : Color.White));
                 spriteBatch.Draw(abxyTexture, ButtonY, new Rectangle(252, 0, 84, 84), (yPressed == VirtualButtonState.Pressed ? Color.Crimson : Color.White));
@@ -366,30 +367,30 @@ namespace AndroidTest
             #endregion
 
             #region This is not X360 type controls
-            else
-            {
-                switch (currentWeapon)
-                {
-                    case WeaponType.Meelee:
-                        spriteBatch.Draw(fireButton, fireButtonPosition, fireTouch.HasValue ? FireButtonColor : Color.White);
-                        break;
+            //else
+            //{
+            //    switch (currentWeapon)
+            //    {
+            //        case WeaponType.Meelee:
+            //            spriteBatch.Draw(fireButton, fireButtonPosition, fireTouch.HasValue ? FireButtonColor : Color.White);
+            //            break;
 
-                    case WeaponType.Range:
-                        Vector2 currentRightPosition = new Vector2(
-                            RightThumbOriginalPosition.X + RightStick.X * maxDistance,
-                            RightThumbOriginalPosition.Y + RightStick.Y * maxDistance * -1);
+            //        case WeaponType.Range:
+            //            Vector2 currentRightPosition = new Vector2(
+            //                RightThumbOriginalPosition.X + RightStick.X * maxDistance,
+            //                RightThumbOriginalPosition.Y + RightStick.Y * maxDistance * -1);
 
-                        spriteBatch.Draw(padTexture, RightPadArea, rightTouch.HasValue ? RightThumbColor : Color.White);
-                        spriteBatch.Draw(thumbTexture, currentRightPosition, rightTouch.HasValue ? RightThumbColor : Color.White);
+            //            spriteBatch.Draw(padTexture, RightPadArea, rightTouch.HasValue ? RightThumbColor : Color.White);
+            //            spriteBatch.Draw(thumbTexture, currentRightPosition, rightTouch.HasValue ? RightThumbColor : Color.White);
 
-                        break;
+            //            break;
 
-                    case WeaponType.RangeAutoAim:
-                        spriteBatch.Draw(fireButton, fireButtonPosition, fireTouch.HasValue ? FireButtonColor : Color.White);
+            //        case WeaponType.RangeAutoAim:
+            //            spriteBatch.Draw(fireButton, fireButtonPosition, fireTouch.HasValue ? FireButtonColor : Color.White);
 
-                        break;
-                }
-            }
+            //            break;
+            //    }
+            //}
             #endregion
         }
 
@@ -397,8 +398,8 @@ namespace AndroidTest
         {
 #if WINDOWS_PHONE || ANDROID
             leftTouch = null;
-            rightTouch = null;
-            fireTouch = null;
+            //rightTouch = null;
+           // fireTouch = null;
 
             xTouch = null;
             yTouch = null;
@@ -500,41 +501,41 @@ namespace AndroidTest
                     }
                     #endregion
                 }
-                else
-                {
-                    if (CurrentWeapon == WeaponType.Range)
-                    {
-                        if (t.Id == rightId)
-                        {
-                            rightTouch = t;
-                            continue;
-                        }
-                        if (rightId == -1)
-                        {
-                            if (IsTouchingRightStick(t.Position))
-                            {
-                                rightTouch = t;
-                                continue;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        if (t.Id == fireId)
-                        {
-                            fireTouch = t;
-                            continue;
-                        }
-                        if (fireId == -1)
-                        {
-                            if (IsTouchingButton(ref x, ref y, ref fireButtonCollision))
-                            {
-                                fireTouch = t;
-                                continue;
-                            }
-                        }
-                    }
-                }
+                //else
+                //{
+                //    if (CurrentWeapon == WeaponType.Range)
+                //    {
+                //        if (t.Id == rightId)
+                //        {
+                //            rightTouch = t;
+                //            continue;
+                //        }
+                //        if (rightId == -1)
+                //        {
+                //            if (IsTouchingRightStick(t.Position))
+                //            {
+                //                rightTouch = t;
+                //                continue;
+                //            }
+                //        }
+                //    }
+                //    else
+                //    {
+                //        if (t.Id == fireId)
+                //        {
+                //            fireTouch = t;
+                //            continue;
+                //        }
+                    //    if (fireId == -1)
+                    //    {
+                    //        if (IsTouchingButton(ref x, ref y, ref fireButtonCollision))
+                    //        {
+                    //            fireTouch = t;
+                    //            continue;
+                    //        }
+                    //    }
+                    //}
+                //}
                 #endregion
             }
 
@@ -556,32 +557,32 @@ namespace AndroidTest
             #endregion
 
             #region Right Stick
-            if (rightTouch.HasValue)
-            {
-                RightThumbPosition = new Vector2(
-                    rightTouch.Value.Position.X - thumbTexture.Width / 2,
-                    rightTouch.Value.Position.Y - thumbTexture.Height / 2);
+            //if (rightTouch.HasValue)
+            //{
+            //    RightThumbPosition = new Vector2(
+            //        rightTouch.Value.Position.X - thumbTexture.Width / 2,
+            //        rightTouch.Value.Position.Y - thumbTexture.Height / 2);
 
-                RightThumbPosition = Vector2.Clamp(RightThumbPosition, minRight, maxRight);
-                rightId = rightTouch.Value.Id;
-            }
-            else
-            {
-                rightId = -1;
-                RightThumbPosition += (RightThumbOriginalPosition - RightThumbPosition) * 0.9f;
-            }
-            #endregion
+            //    RightThumbPosition = Vector2.Clamp(RightThumbPosition, minRight, maxRight);
+            //    rightId = rightTouch.Value.Id;
+            //}
+            //else
+            //{
+            //    rightId = -1;
+            //    RightThumbPosition += (RightThumbOriginalPosition - RightThumbPosition) * 0.9f;
+            //}
+            //#endregion
 
-            #region fireTouch
-            if (fireTouch.HasValue)
-            {
-                FireButtonPressed = true;
-            }
-            else
-            {
-                fireId = -1;
-                FireButtonPressed = false;
-            }
+            //#region fireTouch
+            //if (fireTouch.HasValue)
+            //{
+            //    FireButtonPressed = true;
+            //}
+            //else
+            //{
+            //    fireId = -1;
+            //    FireButtonPressed = false;
+            //}
             #endregion
 
             #region x Touch
@@ -679,11 +680,11 @@ namespace AndroidTest
             return (t == ContainmentType.Contains);
         }
 
-        private bool IsTouchingFireButtom(ref Vector3 point)
-        {
-            fireButtonCollision.Contains(ref point, out t);
-            return (t == ContainmentType.Contains);
-        }
+        //private bool IsTouchingFireButtom(ref Vector3 point)
+        //{
+        //    fireButtonCollision.Contains(ref point, out t);
+        //    return (t == ContainmentType.Contains);
+        //}
 
         private bool IsTouchingButton(ref float x, ref float y, ref BoundingSphere buttonBounds)
         {
@@ -704,8 +705,8 @@ namespace AndroidTest
             (
                 new ThumbSticks
                 (
-                    LeftStick,
-                    RightStick
+                    LeftStick
+                   // RightStick
                 ),
                 new virtualButtons
                 (

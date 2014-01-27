@@ -19,3 +19,25 @@ C:\Users\Damien\Downloads\Proj400.Android-master\Proj400.Android-master\AndroidT
 C:\Users\Damien\Downloads\Proj400.Android-master\Proj400.Android-master\AndroidTest\obj\Debug\R.cs.flag
 C:\Users\Damien\Downloads\Proj400.Android-master\Proj400.Android-master\AndroidTest\obj\Debug\uploadflags.txt
 C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\obj\Debug\AndroidTest.csprojResolveAssemblyReference.cache
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\bin\Debug\AndroidTest.dll
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\bin\Debug\AndroidTest.pdb
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\bin\Debug\AndroidTest.dll.mdb
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\bin\Debug\AndroidTest.AndroidTest.apk
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\bin\Debug\AndroidTest.AndroidTest-Signed.apk
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\bin\Debug\BEPUphysics.dll
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\bin\Debug\MonoGame.Framework.dll
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\bin\Debug\SkinnedModelData.dll
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\bin\Debug\Lidgren.Network.dll
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\bin\Debug\BEPUphysics.pdb
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\bin\Debug\BEPUphysics.dll.mdb
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\bin\Debug\SkinnedModelData.pdb
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\bin\Debug\SkinnedModelData.dll.mdb
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\obj\Debug\AndroidTest.dll
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\obj\Debug\AndroidTest.pdb
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\obj\Debug\android\bin\AndroidTest.AndroidTest.apk
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\obj\Debug\res\values\strings.xml
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\obj\Debug\res\drawable\icon.png
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\obj\Debug\res\drawable\splash.png
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\obj\Debug\res\values\styles.xml
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\obj\Debug\R.cs.flag
+C:\Users\Damien\Documents\Visual Studio 2010\Projects\Proj400.Android-master\Proj400.Android-master\AndroidTest\obj\Debug\uploadflags.txt

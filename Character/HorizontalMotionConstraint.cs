@@ -12,7 +12,7 @@ using BEPUphysics;
 using System.Diagnostics;
 using Microsoft.Xna.Framework.Input;
 
-namespace AndroidTest
+namespace Blocker
 {
     /// <summary>
     /// Manages the horizontal movement of a character.

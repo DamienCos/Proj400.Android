@@ -5,9 +5,9 @@ using Microsoft.Xna.Framework;
 using Android.Views;
 using System.IO;
 
-namespace AndroidTest
+namespace Blocker
 {
-    [Activity(Label = "AndroidTest"
+    [Activity(Label = "Blocker"
         , MainLauncher = true
         , Icon = "@drawable/icon"
         , Theme = "@style/Theme.Splash"

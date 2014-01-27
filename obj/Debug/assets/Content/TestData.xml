@@ -5,7 +5,7 @@
     <id>1</id>
     <modelPath>Models\Vampire</modelPath>
     <PositionX>100</PositionX>
-    <PositionY>10</PositionY>
+    <PositionY>0</PositionY>
     <PositionZ>0</PositionZ>
     <RotationX>0</RotationX>
     <RotationY>0</RotationY>
@@ -17,7 +17,7 @@
       <id>2</id>
       <model_Path>Models\Cube</model_Path>
       <PositionX>-100</PositionX>
-      <PositionY>10</PositionY>
+      <PositionY>0</PositionY>
       <PositionZ>0</PositionZ>
       <RotationX>0</RotationX>
       <RotationY>10</RotationY>
@@ -26,7 +26,7 @@
     </Object3D_Data>
     <Object3D_Data>
       <id>0</id>
-      <model_Path>Models\\Ground</model_Path>
+      <model_Path>Models\Ground</model_Path>
       <PositionX>0</PositionX>
       <PositionY>0</PositionY>
       <PositionZ>0</PositionZ>
