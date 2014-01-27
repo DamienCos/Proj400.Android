@@ -24,5 +24,16 @@
       <RotationZ>0</RotationZ>
       <RotationW>0</RotationW>
     </Object3D_Data>
+    <Object3D_Data>
+      <id>0</id>
+      <model_Path>Models\\Ground</model_Path>
+      <PositionX>0</PositionX>
+      <PositionY>0</PositionY>
+      <PositionZ>0</PositionZ>
+      <RotationX>0</RotationX>
+      <RotationY>0</RotationY>
+      <RotationZ>0</RotationZ>
+      <RotationW>0</RotationW>
+    </Object3D_Data>
   </GameObject3D>
 </LevelData>

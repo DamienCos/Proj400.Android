@@ -23,13 +23,7 @@ namespace AndroidTest
         {
             base.OnCreate(bundle);
 
-            //// Read the contents of our asset
-            //string content;
-            //using (StreamReader sr = new StreamReader(Assets.Open("read_asset.txt")))
-            //{
-            //    content = sr.ReadToEnd();
-            //}
-
+          
             Game1.Activity = this;
             var g = new Game1();
             SetContentView(g.Window);

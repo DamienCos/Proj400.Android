@@ -15,11 +15,15 @@
     <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <AndroidSupportedAbis>armeabi-v7a%3bx86</AndroidSupportedAbis>
+    <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
     <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
-    <TargetFrameworkVersion>v2.3</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.2</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidUseLatestPlatformSdk>
+    </AndroidUseLatestPlatformSdk>
+    <JavaMaximumHeapSize />
+    <JavaOptions />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,17 +45,9 @@
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BEPUik, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="BEPUphysics, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31f6a8732a21de19, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\BEPUik.dll</HintPath>
-    </Reference>
-    <Reference Include="BepuPhysics, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\BepuPhysics.dll</HintPath>
-    </Reference>
-    <Reference Include="BEPUutilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\BEPUutilities.dll</HintPath>
+      <HintPath>bin\Debug\BEPUphysics.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
@@ -70,6 +66,9 @@
     </Compile>
     <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\Framework\Character.cs">
       <Link>FrameWork\Character.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\Framework\ChaseCamera.cs">
+      <Link>FrameWork\ChaseCamera.cs</Link>
     </Compile>
     <Compile Include="..\..\..\XnaEngine2012\XnaEngine2012\XnaEngine2012\Framework\GameAnimatedModel.cs">
       <Link>FrameWork\GameAnimatedModel.cs</Link>
@@ -150,6 +149,15 @@
       <Link>MenuSystem\TestLevel.cs</Link>
     </Compile>
     <Compile Include="Activity1.cs" />
+    <Compile Include="Character\CharacterController.cs" />
+    <Compile Include="Character\CharacterControllerInput.cs" />
+    <Compile Include="Character\HorizontalMotionConstraint.cs" />
+    <Compile Include="Character\ICharacterTag.cs" />
+    <Compile Include="Character\QueryManager.cs" />
+    <Compile Include="Character\StanceManager.cs" />
+    <Compile Include="Character\StepManager.cs" />
+    <Compile Include="Character\SupportFinder.cs" />
+    <Compile Include="Character\VerticalMotionConstraint.cs" />
     <Compile Include="ChaseCam.cs" />
     <Compile Include="Controls\InputAction.cs" />
     <Compile Include="Controls\InputState.cs" />
@@ -170,64 +178,10 @@
     <AndroidAsset Include="Content\Models\Ground.xnb" />
     <AndroidAsset Include="Content\rust_0.xnb" />
     <AndroidAsset Include="Content\rust_1.xnb" />
-    <AndroidAsset Include="Content\Textures\AnimatedButterfly.xnb" />
-    <AndroidAsset Include="Content\Textures\AnimatedExplosion.xnb" />
-    <AndroidAsset Include="Content\Textures\Arrow.xnb" />
-    <AndroidAsset Include="Content\Textures\Arrow2.xnb" />
-    <AndroidAsset Include="Content\Textures\Arrow3.xnb" />
-    <AndroidAsset Include="Content\Textures\Arrow4.xnb" />
-    <AndroidAsset Include="Content\Textures\Arrow5.xnb" />
     <AndroidAsset Include="Content\Textures\BackGround.xnb" />
     <AndroidAsset Include="Content\Textures\Ball.xnb" />
     <AndroidAsset Include="Content\Textures\Bubble.xnb" />
     <AndroidAsset Include="Content\Textures\Cloud.xnb" />
-    <AndroidAsset Include="Content\Textures\CloudLight.xnb" />
-    <AndroidAsset Include="Content\Textures\CrossArrow.xnb" />
-    <AndroidAsset Include="Content\Textures\Dog.xnb" />
-    <AndroidAsset Include="Content\Textures\Donut.xnb" />
-    <AndroidAsset Include="Content\Textures\DPSFLogo.xnb" />
-    <AndroidAsset Include="Content\Textures\DPSFText.xnb" />
-    <AndroidAsset Include="Content\Textures\ExplosionParticles.xnb" />
-    <AndroidAsset Include="Content\Textures\Fire.xnb" />
-    <AndroidAsset Include="Content\Textures\Flower.xnb" />
-    <AndroidAsset Include="Content\Textures\Flower2.xnb" />
-    <AndroidAsset Include="Content\Textures\Flower3.xnb" />
-    <AndroidAsset Include="Content\Textures\Flower4.xnb" />
-    <AndroidAsset Include="Content\Textures\Flower5.xnb" />
-    <AndroidAsset Include="Content\Textures\Gear.xnb" />
-    <AndroidAsset Include="Content\Textures\Gear2.xnb" />
-    <AndroidAsset Include="Content\Textures\Gear3.xnb" />
-    <AndroidAsset Include="Content\Textures\Gear4.xnb" />
-    <AndroidAsset Include="Content\Textures\Gear5.xnb" />
-    <AndroidAsset Include="Content\Textures\MoveArrow.xnb" />
-    <AndroidAsset Include="Content\Textures\Paper.xnb" />
-    <AndroidAsset Include="Content\Textures\Particle.xnb" />
-    <AndroidAsset Include="Content\Textures\RedCircle.xnb" />
-    <AndroidAsset Include="Content\Textures\Shape1.xnb" />
-    <AndroidAsset Include="Content\Textures\Shape2.xnb" />
-    <AndroidAsset Include="Content\Textures\Smoke.xnb" />
-    <AndroidAsset Include="Content\Textures\Spark.xnb" />
-    <AndroidAsset Include="Content\Textures\Splat.xnb" />
-    <AndroidAsset Include="Content\Textures\Star.xnb" />
-    <AndroidAsset Include="Content\Textures\Star2.xnb" />
-    <AndroidAsset Include="Content\Textures\Star3.xnb" />
-    <AndroidAsset Include="Content\Textures\Star4.xnb" />
-    <AndroidAsset Include="Content\Textures\Star5.xnb" />
-    <AndroidAsset Include="Content\Textures\Star6.xnb" />
-    <AndroidAsset Include="Content\Textures\Star7.xnb" />
-    <AndroidAsset Include="Content\Textures\Star8.xnb" />
-    <AndroidAsset Include="Content\Textures\Star9.xnb" />
-    <AndroidAsset Include="Content\Textures\StarFish.xnb" />
-    <AndroidAsset Include="Content\Textures\Sun.xnb" />
-    <AndroidAsset Include="Content\Textures\Sun2.xnb" />
-    <AndroidAsset Include="Content\Textures\Sun3.xnb" />
-    <AndroidAsset Include="Content\Textures\ThrowingStar.xnb" />
-    <AndroidAsset Include="Content\Textures\Wheel.xnb" />
-    <AndroidAsset Include="Content\Textures\WhiteSquare.xnb" />
-    <AndroidAsset Include="Content\Textures\WhiteSquare1.xnb" />
-    <AndroidAsset Include="Content\Textures\WhiteSquare10.xnb" />
-    <AndroidAsset Include="Content\Textures\WhiteSquare2.xnb" />
-    <AndroidAsset Include="Content\Textures\WordBubble.xnb" />
     <AndroidAsset Include="Content\Textures\X.xnb" />
     <AndroidAsset Include="Content\Textures_Menu\ABXY_buttons.xnb" />
     <AndroidAsset Include="Content\Textures_Menu\background.xnb" />
