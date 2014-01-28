@@ -23,21 +23,17 @@ namespace Blocker
         public Game1()
         {
             Content.RootDirectory = "Content";
-
+            
             graphics = new GraphicsDeviceManager(this);
             graphics.IsFullScreen = true;
             TargetElapsedTime = TimeSpan.FromTicks(333333);
-
-            //InitializePortraitGraphics();
+            graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft | DisplayOrientation.LandscapeRight;
             InitializeLandscapeGraphics();
             
             // Create the screen manager component.
-            screenManager = new ScreenManager(this);
-           
+            screenManager = new ScreenManager(this);           
             Components.Add(screenManager);
-
-            // attempt to deserialize the screen manager from disk. if that
-            // fails, we add our default screens.
+            // attempt to deserialize the screen manager from disk. if that fails, we add our default screens.
             if (!screenManager.DeserializeState())
             {
                 // Activate the first screens.
@@ -100,16 +96,18 @@ namespace Blocker
         }
 
 
-        //protected override void Update(GameTime gameTime)
-        //{
-        //    // Allows the game to exit
-        //    //if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-        //    //    this.Exit();
+        protected override void Update(GameTime gameTime)
+        {
+            // Allows the game to exit
+            //if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+            //    this.Exit();
 
-        //    // TODO: Add your update logic here
-
-        //    base.Update(gameTime);
-        //}
+            // TODO: Add your update logic here
+            //Game1.Activity.OnConfigurationChanged(orientation);
+            if (graphics.GraphicsDevice.Viewport.Width != 1280 || graphics.GraphicsDevice.Viewport.Height != 800)
+                graphics.GraphicsDevice.Viewport = new Viewport(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight); 
+            base.Update(gameTime);
+        }
 
 
         protected override void Draw(GameTime gameTime)

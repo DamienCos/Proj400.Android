@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="AndroidTest.AndroidTest">
   <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="18" />
+  <!--<activity android:configChanges="orientation|screenSize"></activity>-->
   <application android:name="mono.android.app.Application" android:debuggable="true">
-    <activity android:alwaysRetainTaskState="true" android:configChanges="keyboard|keyboardHidden|orientation" android:icon="@drawable/icon" android:label="Blocker" android:launchMode="singleInstance" android:screenOrientation="sensorLandscape" android:theme="@style/Theme.Splash" android:name="blocker.Activity1">
+    <activity android:alwaysRetainTaskState="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:icon="@drawable/icon" android:label="Blocker" android:launchMode="singleInstance" android:screenOrientation="sensorLandscape" android:theme="@style/Theme.Splash" android:name="blocker.Activity1">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

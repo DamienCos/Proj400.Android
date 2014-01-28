@@ -4,6 +4,7 @@ using Android.OS;
 using Microsoft.Xna.Framework;
 using Android.Views;
 using System.IO;
+using Android.Content.Res;
 
 namespace Blocker
 {
@@ -14,11 +15,12 @@ namespace Blocker
         , AlwaysRetainTaskState = true
         , LaunchMode = Android.Content.PM.LaunchMode.SingleInstance
         , ScreenOrientation = ScreenOrientation.SensorLandscape
-        , ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.Keyboard | ConfigChanges.KeyboardHidden)]
+        , ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.Keyboard | ConfigChanges.KeyboardHidden | ConfigChanges.ScreenSize)]
+
     public class Activity1 : Microsoft.Xna.Framework.AndroidGameActivity
     {
         
-
+      
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -30,6 +32,16 @@ namespace Blocker
             g.Run();
         }
 
+        protected override void OnResume()
+        {
+            //Game1.Activity.OnConfigurationChanged(orientation);
+            base.OnResume();
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+        }
 
     }
 }
