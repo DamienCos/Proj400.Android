@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 	<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="18" />
-  <!--<activity android:configChanges="orientation|screenSize"></activity>-->
-	<application>
-    
-  </application>
+	<!--<activity android:configChanges="orientation|screenSize"></activity>-->
+	<application></application>
 </manifest>
